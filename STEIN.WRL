@@ -1,0 +1,112 @@
+#VRML V1.0 ascii
+
+# nur mit Live3D Extensions
+#
+# Der Author von diesem Teil ist Hacky
+# pittyplatsch@hotmail.com
+#
+#
+# Einstellungen
+
+Separator { DEF Viewer Info{ string "walk" } 
+            DEF Start PerspectiveCamera { position 0 -3.20 30 }
+ShapeHints{ shapeType SOLID faceType CONVEX
+}
+}
+Separator { DEF BackgroundColor Info { string "0.6 0.8 1" } 
+       
+# Boden
+Separator {
+      Transform { translation 0 -6 25 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 50 height 1 depth 50 }
+}
+# wand rechts
+Separator {
+      Transform { translation 25.25 0.5 25 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 0.5 height 14 depth 50 }
+}
+
+# wand links
+Separator {
+      Transform { translation -25.25 0.5 25 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 0.5 height 14 depth 50 }
+}
+# wand hinten
+Separator {
+      Transform { translation 0 0.5 -0.25 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 51 height 14 depth 0.5 }
+}
+# vorne oben
+Separator {
+      Transform { translation 0 5.5 50 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 51 height 4 depth 0.5 }
+    }
+# vorne unten
+Separator {
+      Transform { translation 0 -5 50 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 51 height 3 depth 0.5 }
+}
+# schaufenster
+Separator {
+      Transform { translation 0 0 50 }
+      Material { diffuseColor 0 0 1 transparency 0.85 }
+      Cube { width 51 height 7 depth 0.02 }
+}
+# Decke
+Separator {
+      Transform { translation 0 7.25 25 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 50 height 0.5 depth 50 }
+}
+# Bild Mitte
+Separator {
+      Transform { translation 0 0 0 }
+      Material { diffuseColor 0 1 1 }
+      Cube { width 9 height 11 depth 0.2 }
+
+
+      Transform { translation 0 0 1 }
+      Texture2 { filename "grupe.jpg"}        
+      Material { diffuseColor 1 1 1 }
+      Cube { width 9 height 11 depth 0 }
+}
+# Bild hinten links
+Separator {
+      Transform { translation -20 0 5 rotation 0 1 0 0.7854  }
+      Material { diffuseColor 1 1 1 }
+      Cube { width 13 height 9 depth 0.2 }
+
+
+      Transform { translation 0 0 1 }
+      Texture2 { filename "22a.jpg"}        
+      Material { diffuseColor 1 1 1 }
+      Cube { width 13 height 9 depth 0 }
+}
+# Bild hinten rechts
+Separator {
+      Transform { translation 20 0 5 rotation 0 1 0 -0.7854  }
+      Material { diffuseColor 1 1 1 }
+      Cube { width 13 height 9 depth 0.2 }
+
+
+      Transform { translation 0 0 1 }
+      Texture2 { filename "circl.jpg"}        
+      Material { diffuseColor 1 1 1 }
+      Cube { width 13 height 9 depth 0 }
+}
+# Strandwand
+Separator {
+      Transform { translation 0 200 1000 }
+      Texture2 { filename "strando.jpg"}
+      Material { diffuseColor 0 1 1 }
+      Cube { width 2500 height 500 depth 0 }
+    }
+# ende
+    }
+    }  

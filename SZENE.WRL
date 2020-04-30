@@ -1,0 +1,179 @@
+#VRML V1.0 ascii
+
+# nur mit Live3D Extensions
+#
+# Der Author von diesem Teil ist Hacky
+# pittyplatsch@hotmail.com
+#
+#
+# Einstellungen
+
+Separator { DEF Viewer Info{ string "walk" } 
+            DEF Start PerspectiveCamera { position 0 0.9 200 }
+ShapeHints{ shapeType SOLID faceType CONVEX
+}
+}
+Separator { DEF BackgroundColor Info { string "0.6 0.8 1" } 
+       
+# Boden
+
+
+Separator {
+      Transform { translation 0 -0.26 -10 rotation 0 1 0 3.1415927  }
+      Material { diffuseColor 1 1 1 }
+      Cube { width 26 height 0.5 depth 26 }
+
+
+      Transform { translation 0 0.27 0 }
+      Texture2 { filename "&boden.jpg"}        
+      Material { diffuseColor 1 0.61 0.4 }
+      Cube { width 26 height 0 depth 26 }
+}}
+# Meer
+
+Separator {
+      Transform { translation 0 7.5 -23  }
+      Material { diffuseColor 0.6 0.8 1 }
+      Cube { width 36 height 25 depth 0.25 }
+
+
+      Transform { translation 0 0 1 }
+      Texture2 { filename "meer.jpg"}        
+      Material { diffuseColor 1 0.61 0.4 }
+      Cube { width 26 height 15 depth 0.50 }
+}
+
+
+# koerper
+Separator {
+      Transform { translation 0 1.15 0                       }
+      Texture2  { filename "&tuch.jpg"                       }
+      Material  { diffuseColor 0 1 1                         }
+      Cylinder  { radius 0.13 height 0.7                     }
+}
+# rechtes Bein
+Separator {
+      Transform { translation -0.07 0.4 0                    }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.0616 height 0.8                   }
+}
+# linkes Bein
+Separator {
+      Transform { translation 0.07 0.4 0                     }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.0616 height 0.8                   }
+}
+# Hals
+Separator {
+      Transform { translation 0 1.55 0                       }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.045 height 0.13                   }
+}
+# Kopf
+Separator {
+      Transform { translation 0 1.7 0                        }
+      Texture2 { filename "&face.jpg"                        } 
+      Sphere    { radius 0.12                                }
+}
+}
+# linker OberArm
+Separator {
+      Transform { translation -0.17 1.37 0.075  rotation 1 1 0 -1  }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.038 height 0.3                          }
+}
+# linker UnterArm
+Separator {
+      Transform { translation -0.10 1.20 0.15  rotation 0 0 1 1    }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.03 height 0.28                          }
+}}
+# rechter OberArm
+Separator {
+      Transform { translation 0.12 1.6 0.075  rotation 1 0 0 -2.641 }
+      Texture2  { filename "&haut.jpg"                              } 
+      Cylinder  { radius 0.038 height 0.3                           }
+}
+# rechter UnterArm
+Separator {
+      Transform { translation 0.03 1.78 0.15  rotation 0 0 1 1      }
+      Texture2  { filename "&haut.jpg" wraps clamp wrapt clamp      } 
+      Cylinder  { radius 0.03 height 0.28                           }
+}
+}}
+
+
+SpinGroup { rotation 0 1 0 0.1
+Separator { Transform { translation -3 0 -6                       }
+# koerper 2
+Separator {
+      Transform { translation 0 1.15 0                       }
+      Texture2  { filename "&hemd.jpg"                       }
+      Material  { diffuseColor 0 1 1                         }
+      Cylinder  { radius 0.13 height 0.7                     }
+}
+# rechtes Bein
+
+Separator {
+      Transform { translation -0.07 0.4 0                    }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.0616 height 0.8                   }
+}
+# linkes Bein
+
+Separator {
+      Transform { translation 0.07 0.4 0                     }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.0616 height 0.8                   }
+}
+SpinGroup { rotation 0 1 0 0.03
+}
+# Hals
+Separator {
+      Transform { translation 0 1.55 0                       }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.045 height 0.13                   }
+}
+# Kopf
+
+Separator {
+      Transform { translation 0 1.7 0                        }
+      Texture2 { filename "&torsti.jpg"                        } 
+      Sphere    { radius 0.12                                }
+}
+
+# linker OberArm
+
+Separator {
+      Transform { translation -0.17 1.37 0.075  rotation 1 1 0 -1  }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.038 height 0.3                          }
+}
+# linker UnterArm
+
+Separator {
+      Transform { translation -0.10 1.20 0.15  rotation 0 0 1 1    }
+      Texture2  { filename "&haut.jpg"                             } 
+      Cylinder  { radius 0.03 height 0.28                          }
+}
+# rechter OberArm
+
+Separator {
+      Transform { translation 0.12 1.6 0.075  rotation 1 0 0 -2.641 }
+      Texture2  { filename "&haut.jpg"                              } 
+      Cylinder  { radius 0.038 height 0.3                           }
+}
+# rechter UnterArm
+
+Separator {
+      Transform { translation 0.03 1.78 0.15  rotation 0 0 1 1      }
+      Texture2  { filename "&haut.jpg" wraps clamp wrapt clamp      } 
+      Cylinder  { radius 0.03 height 0.28                           }
+}
+}
+}
+
+
+# ende
+    }
+    }  

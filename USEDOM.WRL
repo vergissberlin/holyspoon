@@ -1,0 +1,83 @@
+#VRML V1.0 ascii
+
+# nur mit Live3D Extensions
+
+Separator
+  { DEF BackgroundColor Info { string ".4 .66 1" } 
+
+  Separator
+    { FontStyle { size 0.4
+                  family SANS
+                }  
+      Transform { translation 0 4 0 }
+      Material { diffuseColor 1 0.5 0 }
+      Separator { AxisAlignment { alignment ALIGNAXISXYZ }
+                  AsciiText { justification CENTER
+                              string "Urlaub auf Usedom" }
+                }
+
+  
+Separator {
+      Transform { translation 0 -2 0 }
+      SpinGroup { rotation 0 1 0 0.03
+      Texture2 { filename "spoon02.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 2 1 transparency 0.3 }
+      Cube { width 1 height 3 depth 0 }
+}
+}     
+
+#wuerfel
+Separator { SpinGroup { rotation 1 1 1 0.03
+# Bild auf Vorderseite
+Separator {
+      Transform { translation 0 0 -7 }
+      Texture2 { filename "22a.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 1 1 }
+      Cube { width 3 height 3 depth 0 }
+
+} 
+# Bild auf Rueckseite
+Separator {
+      Transform { translation 0 0 -3 rotation 0 1 0 3.1415 }
+      Texture2 { filename "30a.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 1 1 }
+      Cube { width 3 height 3 depth 0 }
+} 
+# Bild auf Oberseite
+Separator {
+      Transform { translation 0 1.5 -1.5 rotation 1 0 0 -1.5707 }
+      Texture2 { filename "33a.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 1 1 }
+      Cube { width 3 height 3 depth 0 }
+}  
+# Bild auf Unterseite
+Separator {
+      Transform { translation 0 0 -3  }
+      Texture2 { filename "34a.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 1 1 }
+      Cube { width 3 height 3 depth 0 }
+} 
+# Bild auf rechte Seite
+Separator {
+      Transform { translation 1.5 0 1.5 rotation 0 1 0 1.5707 }
+      Texture2 { filename "15a.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 1 1 }
+      Cube { width 3 height 3 depth 0 }
+}  
+# Bild auf linke Seite
+Separator {
+      Transform { translation 0 0 -3 }
+      Texture2 { filename "grupe.jpg" wrapt CLAMP wraps repeat }        
+      Material { diffuseColor 0 1 1 }
+      Cube { width 3 height 3 depth 0 }
+} 
+# rotation
+}
+}     
+# ende wuerfel   
+
+# ende
+    }
+    } 
+
+

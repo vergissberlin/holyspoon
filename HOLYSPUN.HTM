@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="Author" CONTENT="Andrej Lademann">
+   <META HTTP-EQUIV="Datum" CONTENT="Sommer 1998">
+   <META HTTP-EQUIV="Fotos" CONTENT="Andrej">
+   <META NAME="Classification" CONTENT="Homepages,Prevat">
+   <META NAME="Description" CONTENT="eine kleine HP über unseren Urlaub an der Ostsee">
+   <META NAME="KeyWords" CONTENT="Ostsee,Freunde,Andrej,Lademann,Urlaub">
+   <TITLE>HOLY SPOON</TITLE>
+<SCRIPT LANGUAGE="JavaScript">
+
+<!--- hide script from old browsers
+// browser test:
+browserName = navigator.appName;
+browserVer = parseInt(navigator.appVersion);
+if (browserName == "Netscape" && browserVer >= 3) version = "1";
+else version = "2";
+// preload images:
+if (version == "1") {
+clickme1 = new Image(75,22);
+clickme1.src = "spoon01.jpg";
+clickme2 = new Image(75,22);
+clickme2.src = "spoon02.jpg";
+}
+function hiLite(imgDocID,imgObjName) {
+if (version == "1") {
+document.images[imgDocID].src = eval(imgObjName + ".src")
+}}
+// end hiding --->
+<!--//
+        {
+        window.defaultStatus ="THE HOLY SPOON"
+               }
+//-->
+<!--
+  var Text = "The Holy Spoon";  
+  var Geschwindigkeit = 150;   /*** Nach Bedarf erhoehen oder erniedrigen ***/
+  var Breite = 100;            /*** Nach Bedarf erhoehen oder erniedrigen ***/
+  var TextLaenge = Text.length; /*** Bitte nicht aendern ***/
+  var Position = 1 - Breite;   /*** Bitte nicht aendern ***/
+
+ function StatusLauftext()    /*** ab hier bitte nichts aendern ***/
+ {
+  Position++;
+  var Textzustand="";
+  if (Position == TextLaenge) 
+   {
+    Position = 1 - Breite;
+   }
+  if (Position < 0) 
+   {
+    for (var Zaehler=1; Zaehler <= Math.abs(Position); Zaehler++) 
+     {
+      Textzustand = Textzustand + " ";
+     };
+    Textzustand = Textzustand + Text.substring(0, Breite - Zaehler + 1);
+   }
+  else 
+   {
+    Textzustand = Textzustand + Text.substring(Position, Breite + Position);
+   }
+  window.status = Textzustand;
+  setTimeout("StatusLauftext()",Geschwindigkeit);
+ }
+ //-->
+   <!--
+  function SagDatumUndZeit()
+   {
+    var Jetzt = new Date();
+    var Tag = Jetzt.getDate();
+    var Monat = Jetzt.getMonth();
+    var Jahr = Jetzt.getYear();
+    var Stunden = Jetzt.getHours();
+    var Minuten = Jetzt.getMinutes();
+    var NachVoll  = ((Minuten < 10) ? ":0" : ":");
+    alert("Hallo mein Freund!!\nDu besucht unsere Urlaubshomepage am "
+    + Tag + "." + Monat + "." + Jahr + "\nEs ist jetzt "
++ Stunden + NachVoll + Minuten + " Uhr");
+   }
+  // -->
+</SCRIPT>
+<bgsound src="1.wav" loop="1">
+</HEAD>
+<BODY TEXT="#000000" onload="SagDatumUndZeit()" BGCOLOR="#FFFFFF" LINK="#0000EE" VLINK="#551A8B" ALINK="#FF0000" onLoad="StatusLauftext();return true">
+<CENTER><h1>THE HOLY SPOON</h1>
+
+<BR>
+<A HREF="freunde.htm" onMouseOver="hiLite('img01','clickme2')" onMouseOut="hiLite('img01','clickme1')"><IMG NAME="img01" SRC="spoon01.jpg" HEIGHT=240 WIDTH=69 border=0></a>
+</center>
+<BR>
+
+<BR>
+<embed src="1.wav">
+</BODY>
+</HTML>
